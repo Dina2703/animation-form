@@ -9,7 +9,7 @@ function animatedForm() {
 
             //Check for validation
             if(input.type === "text" && validateUser(input)) {
-                console.log("it works");
+                nextlSlide(parent, nextForm);
             }
         });
     });
@@ -29,5 +29,10 @@ function error(color){
     document.body.style.backgroundColor = color;
 }
 
+function nextlSlide(parent, nextForm) {
+    parent.classList.add('inactive');
+    parent.classList.remove('active');
+    nextForm.classList.add('active');
+}
 
 animatedForm();
