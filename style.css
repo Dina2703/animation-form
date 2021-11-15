@@ -39,3 +39,26 @@ body {
 .field-finish i:last-child {
     cursor: pointer;
 }
+
+.field-name input,
+.field-email input,
+.field-password input {
+    background: none;
+    border: none;
+    flex: 1;
+    height: 100%;
+    outline: none;
+}
+
+div.innactive {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 50%);
+}
+
+div.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+
