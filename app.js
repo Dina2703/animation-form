@@ -12,6 +12,8 @@ function animatedForm() {
                 nextlSlide(parent, nextForm);
             } else if(input.type === "email" && validateEmail(input)){
                 nextlSlide(parent, nextForm);
+            } else if(input.type === 'password' && validateUser(input)){
+                nextlSlide(parent, nextForm);;
             }
         });
     });
@@ -34,7 +36,6 @@ function validateEmail(email){
         return true;
     } else {
         error('rgb(189, 87, 87)');
-        email.value = "Invalid email address, insert again"
         console.log("the email address is invalide");
     }
 }
